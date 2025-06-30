@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload Image</title>
+</head>
+<body style="font-family: Arial; text-align: center;">
+  <h1>📸 Upload Image for Measurement</h1>
+  <form action="/predict" method="POST" enctype="multipart/form-data">
+    <label>Front Image:</label><br>
+    <input type="file" name="front" accept="image/*" required><br><br>
+
+    <label>Side Image:</label><br>
+    <input type="file" name="side" accept="image/*" required><br><br>
+
+    <label>Back Image:</label><br>
+    <input type="file" name="back" accept="image/*" required><br><br>
+
+    <button type="submit">Upload and Predict</button>
+  </form>
+</body>
+</html>

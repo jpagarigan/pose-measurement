@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prediction Results</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 50px;
+      padding: 20px;
+    }
+    .image-box img {
+      max-width: 100%;
+      border: 2px solid #ccc;
+    }
+    .measurements {
+      text-align: left;
+      font-family: Arial;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center;">👕 Predicted Size and Measurements</h1>
+  <div class="container">
+    <div class="image-box">
+      <img src="{{ url_for('static', filename=front_image) }}" alt="Front Pose">
+    </div>
+    <div class="measurements">
+      <p><strong>Shoulder:</strong> {{ result.shoulder }} cm</p>
+      <p><strong>Torso:</strong> {{ result.torso }} cm</p>
+      <p><strong>Waist:</strong> {{ result.waist }} cm</p>
+
+      <h3>📏 Pixel Distances (px)</h3>
+      <p>Shoulder PX: {{ result.shoulderpx }}</p>
+      <p>Torso PX: {{ result.torsopx }}</p>
+      <p>Waist PX: {{ result.waistpx }}</p>
+
+      <h3>👕 Recommended Size</h3>
+      <p><strong>{{ result.size }}</strong></p>
+    </div>
+    <div style="text-align: center; margin-top: 30px;">
+    <a href="{{ url_for('index') }}">
+        <button style="padding: 10px 20px; font-size: 16px;">⬅️ Back to Upload</button>
+    </a>
+    </div>
+  </div>
+</body>
+</html>
