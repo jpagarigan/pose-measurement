@@ -13,9 +13,9 @@ import datetime
 app = Flask(__name__)
 
 # === Load pre-trained models ===
-shoulder_model = joblib.load("models/model_shoulderpx_to_actualS.joblib")
-torso_model = joblib.load("models/model_torsopx_to_actualT.joblib")
-waist_model = joblib.load("models/model_waistpx_to_actualW.joblib")
+shoulder_model = joblib.load("models/rf_model_shoulderpx_to_actualS.joblib")
+torso_model = joblib.load("models/rf_model_torsopx_to_actualT.joblib")
+waist_model = joblib.load("models/rf_model_waistpx_to_actualW.joblib")
 
 # === MediaPipe Pose ===
 mp_pose = mp.solutions.pose

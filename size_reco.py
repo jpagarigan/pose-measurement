@@ -5,9 +5,9 @@ import os
 import numpy as np
 
 # === File paths ===
-MODEL_PATH = 'models/kmeans_15_model.joblib'
-SCALER_PATH = 'models/scaler_15.joblib'
-MAPPING_PATH = 'models/cluster_to_size_15.json'
+MODEL_PATH = 'models/kmeans_12_model.joblib'
+SCALER_PATH = 'models/scaler_12.joblib'
+MAPPING_PATH = 'models/cluster_to_size_12.json'
 
 # === Load model, scaler, and label map ===
 kmeans_15 = joblib.load(MODEL_PATH)
